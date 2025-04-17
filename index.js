@@ -1,6 +1,7 @@
 const express = require("express");
 const axios = require("axios");
 const app = express();
+require("dotenv").config();
 
 app.set("view engine", "pug");
 app.use(express.static(__dirname + "/public"));
@@ -55,7 +56,7 @@ app.post("/update-cobj", async (req, res) => {
 
   try {
     await axios.post(createObject, update, { headers });
-    res.redirect("back");
+    res.redirect("/");
   } catch (err) {
     console.error(err);
   }
