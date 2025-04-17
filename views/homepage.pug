@@ -7,10 +7,16 @@ html
     body    
         h1 Pets Table
         a(href="/update-cobj") Add/update this table
-        .cards 
-            each pet in data
-                .card 
-                    h2.card__name #{pet.properties.name}
-                    p.card__email #{pet.properties.species}
-                    p.card__email #{pet.properties.age}
+        table
+            thead
+                tr
+                    th Name
+                    th Species
+                    th Age
+            tbody
+                each pet in data
+                    tr
+                        td #{pet.properties.name}
+                        td #{pet.properties.species}
+                        td #{pet.properties.age}
         
