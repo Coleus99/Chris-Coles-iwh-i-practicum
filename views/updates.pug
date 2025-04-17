@@ -1,0 +1,22 @@
+doctype html
+html(lang="en")
+    head
+        title= `${title}`
+        link(rel="stylesheet", href="/css/style.css")
+    body
+        a(href="/") Return to the homepage
+        .form-wrapper
+            form(method="POST")
+                label(for="name") Name
+                input(type="text" name="name" required)
+
+                label(for="age") Age:
+                input(type="number" name="age" id="age" required)
+                
+                label(for="species") Species:
+                select(name="species" id="species" required)
+                    option(value="Dog") Dog
+                    option(value="Cat") Cat
+                    option(value="Fish") Fish
+                
+                input(type="submit" value="Submit")
